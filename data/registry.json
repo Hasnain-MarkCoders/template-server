@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "allowedMatchFields": ["zendesk_office_id", "agentType", "loi"],
+  "payloads": {
+    "standard_nhpw_new_agent_no_loi": {
+      "file": "standard_nhpw_new_agent_no_loi.json",
+      "templateId": "9f5d0e4f-5d8a-4ca5-9362-03c40f4f96ab",
+      "docusignName": "Standard NHPW - New Agent (No LOI)"
+    },
+    "standard_nhpw_seasoned_agent_will_have_loi": {
+      "file": "standard_nhpw_seasoned_agent_will_have_loi.json",
+      "templateId": "4c0282fe-22ac-4db7-9293-bb921bd12263",
+      "docusignName": "Standard NHPW - Seasoned Agent (will have LOI)"
+    }
+  },
+  "rules": [
+    {
+      "id": "standard-new-anaheim",
+      "priority": 10,
+      "payloadKey": "standard_nhpw_new_agent_no_loi",
+      "match": {
+        "zendesk_office_id": ["23308433036311"],
+        "agentType": "New",
+        "loi": "No"
+      }
+    },
+    {
+      "id": "standard-seasoned-anaheim",
+      "priority": 10,
+      "payloadKey": "standard_nhpw_seasoned_agent_will_have_loi",
+      "match": {
+        "zendesk_office_id": ["23308433036311"],
+        "agentType": "Seasoned",
+        "loi": "Yes"
+      }
+    }
+  ]
+}

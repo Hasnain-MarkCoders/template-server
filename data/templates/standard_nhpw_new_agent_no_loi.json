@@ -1,0 +1,1086 @@
+{
+  "templateId": "9f5d0e4f-5d8a-4ca5-9362-03c40f4f96ab",
+  "status": "sent",
+  "eventNotification": {
+    "url": "https://n8n.markcoders.com/webhook/docusign-complete",
+    "requireAcknowledgment": "true",
+    "loggingEnabled": "true",
+    "envelopeEvents": [
+      {
+        "envelopeEventStatusCode": "completed"
+      }
+    ]
+  },
+  "templateRoles": [
+    {
+      "roleName": "Agent",
+      "routingOrder": "1",
+      "name": "{{ $json.requestData.agent_name }}",
+      "email": "{{ $json.requestData.agent_email }}",
+      "tabs": {
+        "signHereTabs": [
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature df16e1bc-7e15-408c-ba2e-3565e9e49d1b"
+          },
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature cac75d4e-038d-401a-9256-b96336e89254"
+          },
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature ca912825-7b2c-48f0-8d22-dc21a04924c7"
+          },
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature 8b0189c2-8275-4ebb-b285-9f5a6b37b43a"
+          },
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature 46b12302-c012-41f3-8cf2-5327160197c5"
+          },
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature 26ef33cc-e65b-4904-8238-53e294968163"
+          },
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature 162394ba-b4b6-4b19-94f3-52a259f81a76"
+          },
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature 15cf2828-33c7-41b3-8c79-8032d17f81ea"
+          },
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature dc9c3a59-3fff-4e60-a058-ec4f7c15a57b"
+          },
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature c2972177-31cc-4589-8e67-5c0b6099f074"
+          },
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature 69d5ee8d-00db-405d-ad52-18a64b1b8528"
+          },
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature 054a4aae-9d6f-4168-a695-8c18aae74a60"
+          },
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature 9fa7c52d-4e9d-45f1-9bb5-6d9862a5878a"
+          },
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature 4028ba65-a037-4588-b631-689614736b4d"
+          },
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature a8527cf2-9c76-4cd1-9d3b-cb04605e82d1"
+          },
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature cff9ca00-bcf2-47c4-bf61-5ecfa0cae3c5"
+          },
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature c91495d9-600f-4a02-b1ec-d3c2ed5002c3"
+          }
+        ],
+        "initialHereTabs": [
+          {
+            "name": "InitialHere",
+            "tabLabel": "Initial 154a1f1a-c49f-4034-9b5f-a0646f8b5610"
+          },
+          {
+            "name": "InitialHere",
+            "tabLabel": "Initial 616da2ac-a805-4273-bcd0-c9caf7de1336"
+          },
+          {
+            "name": "InitialHere",
+            "tabLabel": "Initial 36461646-2a45-4106-a6a6-79c08451b3c7"
+          },
+          {
+            "name": "InitialHere",
+            "tabLabel": "Initial 08f4b733-e82d-4720-97e2-535beb17cfa1"
+          },
+          {
+            "name": "InitialHere",
+            "tabLabel": "Initial 409bd347-7ddb-4f64-bd42-86ccd2f41fea"
+          }
+        ],
+        "signerAttachmentTabs": [
+          {
+            "name": "SignerAttachment",
+            "tabLabel": "driver_license_attachment 7ca2095e-a0f7-4dc4-89ba-614fc5b10d7b"
+          },
+          {
+            "name": "SignerAttachment",
+            "tabLabel": "insurance_attachment f72d6f37-7483-4957-9992-4e969bf0f735"
+          }
+        ],
+        "fullNameTabs": [
+          {
+            "name": "FullName",
+            "value": "{{ $json.formData.legalName }}",
+            "tabLabel": "legalName b240f683-e979-4fc9-a69b-0debc13a32d6"
+          },
+          {
+            "name": "FullName",
+            "value": "{{ $json.formData.legalName }}",
+            "tabLabel": "legalName d1f1cd8c-96e5-4779-ae09-784bc6637772"
+          },
+          {
+            "name": "FullName",
+            "value": "{{ $json.formData.legalName }}",
+            "tabLabel": "legalName a62bf342-53b7-4381-9af5-d56babed426f"
+          },
+          {
+            "name": "FullName",
+            "value": "{{ $json.formData.legalName }}",
+            "tabLabel": "legalName b3265b71-7b06-43b0-85f0-947169ff85d6"
+          },
+          {
+            "name": "FullName",
+            "value": "{{ $json.formData.legalName }}",
+            "tabLabel": "legalName 987968ae-6b03-4a1a-963b-c5253f9e43a0"
+          },
+          {
+            "name": "FullName",
+            "value": "{{ $json.formData.legalName }}",
+            "tabLabel": "legalName 688cf655-1621-46da-995c-db7397104b67"
+          },
+          {
+            "name": "FullName",
+            "value": "{{ $json.formData.legalName }}",
+            "tabLabel": "legalName f6a8e62b-0072-49e3-b4fa-53e2fc2d2f1b"
+          },
+          {
+            "name": "FullName",
+            "value": "{{ $json.formData.legalName }}",
+            "tabLabel": "legalName 85ab5835-3cb0-4b58-9ec3-170f2b646ff8"
+          },
+          {
+            "name": "FullName",
+            "value": "{{ $json.formData.legalName }}",
+            "tabLabel": "legalName a5948ab9-f97f-4d55-b03b-6c85035f5c94"
+          },
+          {
+            "name": "FullName",
+            "value": "{{ $json.formData.legalName }}",
+            "tabLabel": "legalName d6524a58-3cbd-4a43-90d5-6c866a520015"
+          },
+          {
+            "name": "FullName",
+            "value": "{{ $json.formData.legalName }}",
+            "tabLabel": "legalName 36dd05db-c630-41af-a855-6d8294b28ec9"
+          }
+        ],
+        "dateSignedTabs": [
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed ac38e8ba-8152-436e-a1d4-4917b1ad8473"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed dae8c917-2b19-47d6-a277-9fd480b1cf66"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed 193c96b6-fc23-4e25-b1bb-afb35de88bb7"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed 67fcae03-6483-43bc-a9a6-2a164be419e6"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed 248cec5d-59c5-44aa-8227-c90b4b738155"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed c84e1e9c-9845-402f-bb25-31c697690239"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed d78602dc-f81a-4896-b143-adc4f5324acc"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed f5197324-f1cd-4da4-b61d-c4ba143f75c3"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed 1b0be934-367d-4fd8-8b96-c4cb912bb599"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed 1be93b63-e75f-45c5-870a-2d88f8816940"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed 294aaf6a-55cc-4926-9206-f5378797f4a1"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed 70984774-f733-48eb-b3c8-a6bf7dd3c4a8"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed d9e0ecf3-b697-4281-a387-a7b82ccc0559"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed 0db5b2cf-fc99-4404-a864-4a662c5148a2"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed 5eed234d-3689-4f68-baf7-e475764a5a61"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed 5bd76b28-cb32-46f8-a9cd-56be1dbb3d1e"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed 8a2fad06-2313-4561-a18c-178a43d19df8"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed 91b63b12-494f-4082-b511-b27a3c63eb72"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed 9cda8853-ff4a-41de-9c57-f606b22f379e"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed 145a4b64-ba80-4679-be55-c9a997bcab2e"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed f5605b79-0ef7-4aa0-ac4e-9e8f8d1931e3"
+          }
+        ],
+        "textTabs": [
+          {
+            "value": "",
+            "originalValue": "",
+            "tabLabel": "Text cca3d221-c793-42af-802c-ff414dc64558"
+          },
+          {
+            "value": "",
+            "originalValue": "",
+            "tabLabel": "Text 4e0917aa-0ae1-4041-822c-f9a7008d6e88"
+          },
+          {
+            "value": "First Team Real Estate",
+            "originalValue": "First Team Real Estate",
+            "tabLabel": "Text 9ccf9c43-93e9-4b2b-871a-fd90881aece3"
+          },
+          {
+            "value": "",
+            "originalValue": "",
+            "tabLabel": "Text 6c867b91-a9a2-44a0-ab99-8b8f6f12b37a"
+          },
+          {
+            "value": "",
+            "originalValue": "",
+            "tabLabel": "Text 0ad49d54-cc01-40a4-b989-4bb2652111f0"
+          },
+          {
+            "value": "",
+            "originalValue": "",
+            "tabLabel": "Text d14d0d20-e042-492c-85f0-9136d1367eef"
+          },
+          {
+            "value": "",
+            "originalValue": "",
+            "tabLabel": "Text 938b001e-93f6-4221-8909-4142f2da692d"
+          },
+          {
+            "value": "",
+            "originalValue": "",
+            "tabLabel": "Text 913fd231-f0ec-4e61-849d-52192997f470"
+          },
+          {
+            "value": "",
+            "originalValue": "",
+            "tabLabel": "Text 89811a1c-5b69-49d5-be91-13e4f1159896"
+          },
+          {
+            "value": "",
+            "originalValue": "",
+            "tabLabel": "Text 15df4c23-324b-4264-a8d8-e8a808d16916"
+          },
+          {
+            "value": "",
+            "originalValue": "",
+            "tabLabel": "Text 2a38d4c6-d7fe-4f0e-b3bc-22b9a38799c9"
+          },
+          {
+            "value": "",
+            "originalValue": "",
+            "tabLabel": "Text df6a0407-b0ad-4d5f-953f-428120cc9e28"
+          },
+          {
+            "value": "",
+            "originalValue": "",
+            "tabLabel": "Text ed3b9b2c-b9a0-4d14-8da1-bd18cad045b8"
+          },
+          {
+            "value": "",
+            "originalValue": "",
+            "tabLabel": "Text 14d19bb0-1372-4dc7-9738-19ca8efd65fa"
+          },
+          {
+            "value": "",
+            "originalValue": "",
+            "tabLabel": "Text 7bb7ba0f-168e-4d38-8387-f2a9dab04502"
+          },
+          {
+            "value": "{{ $json.formData.ticket_id }}",
+            "originalValue": "{{ $json.formData.ticket_id }}",
+            "tabLabel": "ticket_id 8187226c-e48b-4769-84b5-47cfe65c4485"
+        },
+          {
+            "value": "{{ $json.formData.streetNumber }} , {{ $json.formData.streetName }} , {{ $json.formData.state }} , {{ $json.formData.unit }} , {{ $json.formData.city }} , {{ $json.formData.zipCode }}",
+            "originalValue": "{{ $json.formData.streetNumber }} , {{ $json.formData.streetName }} , {{ $json.formData.state }} , {{ $json.formData.unit }} , {{ $json.formData.city }} , {{ $json.formData.zipCode }}",
+            "tabLabel": "home_address 7cc7a7e4-c5a1-4fc7-96f7-d907003c0c9f"
+          },
+          {
+            "value": "{{ $json.formData.email }}",
+            "originalValue": "{{ $json.formData.email }}",
+            "tabLabel": "email 19ec82be-1e73-4525-bbfa-70961d610fb8"
+          },
+          {
+            "value": "{{ $json.formData.languages.join(', ') }}",
+            "originalValue": "{{ $json.formData.languages.join(', ') }}",
+            "tabLabel": "languages 26e1ccf1-5319-4877-84b0-027b1a9c9cb6"
+          },
+          {
+            "value": "{{ $json.formData.cellPhone }}",
+            "originalValue": "{{ $json.formData.cellPhone }}",
+            "tabLabel": "cellPhone 9078278f-db2a-4724-9701-b595246072fa"
+          },
+          {
+            "value": "{{ $json.formData.businessCell }}",
+            "originalValue": "{{ $json.formData.businessCell }}",
+            "tabLabel": "businessCell 65294573-830f-4e57-9e5d-a9a713867145"
+          },
+          {
+            "value": "{{ $json.formData.birthdate }}",
+            "originalValue": "{{ $json.formData.birthdate }}",
+            "tabLabel": "birthdate c7bd2560-c023-4d56-92b3-88fc68ed043c"
+          },
+          {
+            "value": "{{ $json.formData.driverLicenseExp }}",
+            "originalValue": "{{ $json.formData.driverLicenseExp }}",
+            "tabLabel": "driverLicenseExp 178083c3-3c54-4fc0-8f84-e8fe2c60f92b"
+          },
+          {
+            "value": "{{ $json.formData.nickname }}",
+            "originalValue": "{{ $json.formData.nickname }}",
+            "tabLabel": "nickname 55141b64-e8ae-46a5-8b90-c1aacc839945"
+          },
+          {
+            "value": "{{ $json.formData.ssn }}",
+            "originalValue": "{{ $json.formData.ssn }}",
+            "tabLabel": "ssn 6315c30c-3163-4702-8a79-52db8f87e683"
+          },
+          {
+            "value": "{{ $json.formData.driverLicense }}",
+            "originalValue": "{{ $json.formData.driverLicense }}",
+            "tabLabel": "driverLicense 9baedb76-2f48-4362-8507-e5d1fecdd9b1"
+          },
+          {
+            "value": "{{ $json.formData.legalName }}",
+            "originalValue": "{{ $json.formData.legalName }}",
+            "tabLabel": "legalName 0f4a5952-edd1-4e4b-bb0f-2ac65bc29b52"
+          },
+          {
+            "value": "{{ $json.formData.emergencyName }} , {{ $json.formData.emergencyPhone }}",
+            "originalValue": "",
+            "tabLabel": "emergencyName_emergencyPhone f43af7c1-dc23-4540-a3c9-b8c067dca211"
+          },
+          {
+            "value": "{{ $json.formData.realEstateLicenseNumber }}",
+            "originalValue": "{{ $json.formData.realEstateLicenseNumber }}",
+            "tabLabel": "realEstateLicenseNumber 16d8c4fe-ba30-4dfd-8e4b-29585089ee61"
+          },
+          {
+            "value": "{{ $json.formData.billingCity }} , {{ $json.formData.billingState }} , {{ $json.formData.billingZipCode }}",
+            "originalValue": "{{ $json.formData.billingCity }} , {{ $json.formData.billingState }} , {{ $json.formData.billingZipCode }}",
+            "tabLabel": "billingCity_billingState_billingZipCode 023fd681-6a68-4de7-bcb3-04df8246c6f3"
+          },
+          {
+            "value": "{{ $json.formData.billingStreetName }} , {{ $json.formData.billingStreetNumber }}",
+            "originalValue": "{{ $json.formData.billingStreetName }} , {{ $json.formData.billingStreetNumber }}",
+            "tabLabel": "billingStreetName_billingStreetNumber f83cdbe4-9a5f-4bd9-96cc-55365d778d91"
+          },
+          {
+            "value": "{{ $json.formData.email }}",
+            "originalValue": "{{ $json.formData.email }}",
+            "tabLabel": "email 68b10915-8a04-4a8f-a109-14c4434aa0af"
+          },
+          {
+            "value": "{{ $json.formData.ccName }}",
+            "originalValue": "{{ $json.formData.ccName }}",
+            "tabLabel": "ccName bf707bca-d183-4c9c-b64d-050f20dc2c17"
+          },
+          {
+            "value": "{{ $json.formData.ccNumber }}",
+            "originalValue": "{{ $json.formData.ccNumber }}",
+            "tabLabel": "ccNumber 175fa458-5048-47b2-9bd0-79fd74dd7a14"
+          },
+          {
+            "value": "{{ $json.formData.ccExp }}",
+            "originalValue": "{{ $json.formData.ccExp }}",
+            "tabLabel": "ccExp dd145773-7be2-4567-8cd8-b656517956dc"
+          },
+          {
+            "value": "{{ $json.formData.ccCvv }}",
+            "originalValue": "{{ $json.formData.ccCvv }}",
+            "tabLabel": "ccCvv 10f60cac-f248-4c83-a9d8-a2731078c1b3"
+          },
+          {
+            "value": "{{ $json.formData.realEstateLicenseNumber }}",
+            "originalValue": "{{ $json.formData.realEstateLicenseNumber }}",
+            "tabLabel": "realEstateLicenseNumber fd5518fe-cdce-474a-8510-cc3bb97b9d9f"
+          },
+          {
+            "value": "{{ $json.formData.legalName }}",
+            "originalValue": "{{ $json.formData.legalName }}",
+            "tabLabel": "legalName d465f841-faf6-484a-a0d0-de9ea915808c"
+          },
+          {
+            "value": "{{ $json.formData.cellPhone }}",
+            "originalValue": "{{ $json.formData.cellPhone }}",
+            "tabLabel": "cellPhone c3b199cb-41f3-41fb-b582-a9983f5a5794"
+          },
+          {
+            "value": "{{ $json.formData.realEstateLicenseExpiration }}",
+            "originalValue": "{{ $json.formData.realEstateLicenseExpiration }}",
+            "tabLabel": "realEstateLicenseExpiration 888a75a6-3405-4873-ae9c-4f5ed5aa2fe4"
+          },
+          {
+            "value": "{{ $json.formData.cellPhone }}",
+            "originalValue": "{{ $json.formData.cellPhone }}",
+            "tabLabel": "cellPhone 762639e3-caac-4516-b8cc-95ff0a694a51"
+          },
+          {
+            "value": "{{ $json.formData.email }}",
+            "originalValue": "{{ $json.formData.email }}",
+            "tabLabel": "email 16b0c069-3dfe-4336-958a-24729fb26d1c"
+          },
+          {
+            "value": "{{ $json.formData.mailingStreetNumber }} , {{ $json.formData.mailingStreetName }} , {{ $json.formData.mailingState }} , {{ $json.formData.mailingUnit }} , {{ $json.formData.mailingCity }} , {{ $json.formData.mailingZipCode }}",
+            "originalValue": "{{ $json.formData.mailingStreetNumber }} , {{ $json.formData.mailingStreetName }} , {{ $json.formData.mailingState }} , {{ $json.formData.mailingUnit }} , {{ $json.formData.mailingCity }} , {{ $json.formData.mailingZipCode }}",
+            "tabLabel": "mailingStreetNumber_mailingStreetName_mailingState_mailingUnit_mailingCity_mailingZipCode 85e81f01-7fd9-4f97-8ebf-1c9e5b3875a4"
+          },
+          {
+            "value": "{{ $json.formData.realEstateLicenseNumber }}",
+            "originalValue": "{{ $json.formData.realEstateLicenseNumber }}",
+            "tabLabel": "realEstateLicenseNumber 650d8899-3dcc-4102-86e4-ebe06857ae33"
+          },
+          {
+            "value": "{{ $json.formData.firstName }}",
+            "originalValue": "{{ $json.formData.firstName }}",
+            "tabLabel": "firstName 77c3656c-4070-43ab-b1a7-93d3891a86fa"
+          },
+          {
+            "value": "{{ $json.formData.lastName }}",
+            "originalValue": "{{ $json.formData.lastName }}",
+            "tabLabel": "lastName c43580c3-3ada-4306-982e-90eff1327602"
+          },
+          {
+            "value": "{{ $json.formData.mailingStreetNumber }} , {{ $json.formData.mailingStreetName }} , {{ $json.formData.mailingState }} , {{ $json.formData.mailingUnit }} , {{ $json.formData.mailingCity }} , {{ $json.formData.mailingZipCode }}",
+            "originalValue": "{{ $json.formData.mailingStreetNumber }} , {{ $json.formData.mailingStreetName }} , {{ $json.formData.mailingState }} , {{ $json.formData.mailingUnit }} , {{ $json.formData.mailingCity }} , {{ $json.formData.mailingZipCode }}",
+            "tabLabel": "mailingStreetNumber_mailingStreetName_mailingState_mailingUnit_mailingCity_mailingZipCode b81ff5d8-505e-4be9-b86a-deedebe09057"
+          },
+          {
+            "value": "{{ $json.formData.cellPhone }}",
+            "originalValue": "{{ $json.formData.cellPhone }}",
+            "tabLabel": "cellPhone 16fa4db7-4580-4f9f-aefc-7d50fb7d6171"
+          },
+          {
+            "value": "{{ $json.formData.email }}",
+            "originalValue": "{{ $json.formData.email }}",
+            "tabLabel": "email 25abc196-de7b-41cb-9de7-83e37612bd1f"
+          },
+          {
+            "value": "{{ $json.formData.legalName }}",
+            "originalValue": "{{ $json.formData.legalName }}",
+            "tabLabel": "legalName d8ada82f-d9a8-4060-94bb-41be2b41220c"
+          },
+          {
+            "value": "{{ $json.formData.legalName }}",
+            "originalValue": "{{ $json.formData.legalName }}",
+            "tabLabel": "legalName a1e2133d-0e70-4924-9fd7-5d8567a6b4cd"
+          },
+          {
+            "value": "{{ $json.formData.streetNumber }} , {{ $json.formData.streetName }} , {{ $json.formData.unit }}",
+            "originalValue": "{{ $json.formData.streetNumber }} , {{ $json.formData.streetName }} , {{ $json.formData.unit }}",
+            "tabLabel": "streetNumber_streetName_unit 37c5e792-ed38-409c-9b41-051d5b07ab01"
+          },
+          {
+            "value": "{{ $json.formData.state }} , {{ $json.formData.city }} , {{ $json.formData.zipCode }}",
+            "originalValue": "{{ $json.formData.state }} , {{ $json.formData.city }} , {{ $json.formData.zipCode }}",
+            "tabLabel": "state_city_zipCode e90e5520-674d-4e8c-ac95-8a3e8c7625c5"
+          },
+          {
+            "value": "{{ $json.formData.ssn }}",
+            "originalValue": "{{ $json.formData.ssn }}",
+            "tabLabel": "ssn 572deac3-af7d-4db0-8dfb-1f51ca15cadd"
+          },
+          {
+            "value": "{{ $json.formData.firstName }}",
+            "originalValue": "{{ $json.formData.firstName }}",
+            "tabLabel": "firstName 8df5ac57-45ac-4d34-bf24-9b198a67e82e"
+          },
+          {
+            "value": "{{ $json.formData.lastName }}",
+            "originalValue": "{{ $json.formData.lastName }}",
+            "tabLabel": "lastName d8265b47-6bb1-4e13-8f09-bc525124779f"
+          },
+          {
+            "value": "{{ $json.formData.ssn }}",
+            "originalValue": "{{ $json.formData.ssn }}",
+            "tabLabel": "ssn 8e5cfacd-e028-49cd-9894-69457ee1d90e"
+          },
+          {
+            "value": "{{ $json.formData.streetNumber }}",
+            "originalValue": "{{ $json.formData.streetNumber }}",
+            "tabLabel": "streetNumber b2fbd3cc-7ca4-4885-aaf8-c0c42cdfb394"
+          },
+          {
+            "value": "{{ $json.formData.streetName }}",
+            "originalValue": "{{ $json.formData.streetName }}",
+            "tabLabel": "streetName 6786a33a-fb44-44b4-99e3-774ac3884229"
+          },
+          {
+            "value": "{{ $json.formData.city }}",
+            "originalValue": "{{ $json.formData.city }}",
+            "tabLabel": "city e5b3ad27-bf59-48f2-8b87-2ea8981a5b45"
+          },
+          {
+            "value": "{{ $json.formData.state }}",
+            "originalValue": "{{ $json.formData.state }}",
+            "tabLabel": "state b224fb0c-e4a3-46b4-a099-0384453c582c"
+          },
+          {
+            "value": "{{ $json.formData.zipCode }}",
+            "originalValue": "{{ $json.formData.zipCode }}",
+            "tabLabel": "zipCode edac10a0-9fb9-4603-b98a-f5691ca8db45"
+          },
+          {
+            "value": "{{ $json.formData.state }} , {{ $json.formData.city }} , {{ $json.formData.zipCode }}",
+            "originalValue": "{{ $json.formData.state }} , {{ $json.formData.city }} , {{ $json.formData.zipCode }}",
+            "tabLabel": "state_city_zipCode b6707fb8-8b3b-4479-9ca8-a1d15dcf7478"
+          },
+          {
+            "value": "{{ $json.formData.autoInsuranceCarrier }}",
+            "originalValue": "{{ $json.formData.autoInsuranceCarrier }}",
+            "tabLabel": "autoInsuranceCarrier bc8d4441-a7b9-40da-9c08-9702a97b74d2"
+          },
+          {
+            "value": "{{ $json.formData.autoInsuranceEffectiveDate }}",
+            "originalValue": "{{ $json.formData.autoInsuranceEffectiveDate }}",
+            "tabLabel": "autoInsuranceEffectiveDate 23f36941-fb95-4370-a51c-77fcc9d6acf5"
+          },
+          {
+            "value": "{{ $json.formData.autoInsuranceExpirationDate }}",
+            "originalValue": "{{ $json.formData.autoInsuranceExpirationDate }}",
+            "tabLabel": "autoInsuranceExpirationDate 0d802623-ce19-4f84-ab18-a6b653e1cdef"
+          },
+          {
+            "value": "{{ $json.formData.systemWebsite }}",
+            "originalValue": "{{ $json.formData.systemWebsite }}",
+            "tabLabel": "systemWebsite c0435c8a-4276-4ebb-88c1-23a10d246b91"
+          },
+          {
+            "value": "{{ $json.formData.autoInsurancePolicyNumber }}",
+            "originalValue": "{{ $json.formData.autoInsurancePolicyNumber }}",
+            "tabLabel": "autoInsurancePolicyNumber c813b6d0-298c-432c-9814-95ccb601268e"
+          },
+          {
+            "value": "{{ $json.formData.systemEmail }}",
+            "originalValue": "{{ $json.formData.systemEmail }}",
+            "tabLabel": "systemEmail 98e5ea0e-22df-4d6e-8ce6-507fe39079ae"
+          },
+          {
+            "value": "{{ $json.formData.streetNumber }} , {{ $json.formData.streetName }} , {{ $json.formData.unit }}",
+            "originalValue": "{{ $json.formData.streetNumber }} , {{ $json.formData.streetName }} , {{ $json.formData.unit }}",
+            "tabLabel": "streetNumber_streetName_unit 6dd4f89f-7660-463f-a046-b21149062125"
+          },
+          {
+            "value": "{{ $json.formData.bankName }}",
+            "originalValue": "{{ $json.formData.bankName }}",
+            "tabLabel": "bankName 4d3b5197-978e-4790-9c7e-362b158c1b7f"
+          },
+          {
+            "value": "{{ $json.formData.routingNumber }}",
+            "originalValue": "{{ $json.formData.routingNumber }}",
+            "tabLabel": "routingNumber 431ccc58-1a2c-49ea-b06e-7b04648837ad"
+          },
+          {
+            "value": "{{ $json.formData.accountNumber }}",
+            "originalValue": "{{ $json.formData.accountNumber }}",
+            "tabLabel": "accountNumber d57a801d-71ef-4abf-95db-037e04d22bf1"
+          },
+          {
+            "value": "{{ $json.formData.legalName }}",
+            "originalValue": "{{ $json.formData.legalName }}",
+            "tabLabel": "legalName 02ec6a8c-8d37-4d7e-b0e1-8dc6c94b735b"
+          },
+          {
+            "value": "{{ $json.formData.unit }}",
+            "originalValue": "{{ $json.formData.unit }}",
+            "tabLabel": "unit 1d5ab824-c774-4db4-9186-1f9469b82ddd"
+          }
+        ],
+        "checkboxTabs": [
+          {
+            "name": "",
+            "tabLabel": "taxClass aebd7e8d-c01d-4d88-8942-0d020ad8893a",
+            "selected": "{{ $json.formData.taxClass == 'Individual' ? 'true' : 'false' }}",
+            "selectedOriginal": "{{ $json.formData.taxClass == 'Individual' ? 'true' : 'false' }}",
+            "tabGroupLabels": [
+              "Checkbox Group 60935a85-153a-4174-9961-90fc007cdbe9"
+            ]
+          }
+        ],
+        "radioGroupTabs": [
+          {
+            "groupName": "Radio Group 4686adef-d9b5-4950-b57e-955147745b2b",
+            "radios": [
+              {
+                "value": "Radio1",
+                "selected": "false"
+              },
+              {
+                "value": "Radio2",
+                "selected": "false"
+              }
+            ],
+            "value": "",
+            "originalValue": ""
+          },
+          {
+            "groupName": "Radio Group ee62f301-e3b1-4e22-8502-53e45ac3339a",
+            "radios": [
+              {
+                "value": "Radio1",
+                "selected": "false"
+              },
+              {
+                "value": "Radio2",
+                "selected": "false"
+              }
+            ],
+            "value": "",
+            "originalValue": ""
+          },
+          {
+            "groupName": "powerCurveStart bf2ba911-6261-4cd3-95a1-27ed8261de23",
+            "radios": [
+              {
+                "value": "May",
+                "selected": "{{ $json.formData.powerCurveStart == 'May' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "Jun",
+                "selected": "{{ $json.formData.powerCurveStart == 'Jun' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "Jul",
+                "selected": "{{ $json.formData.powerCurveStart == 'Jul' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "Jan",
+                "selected": "{{ $json.formData.powerCurveStart == 'Jan' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "Feb",
+                "selected": "{{ $json.formData.powerCurveStart == 'Feb' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "Mar",
+                "selected": "{{ $json.formData.powerCurveStart == 'Mar' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "Apr",
+                "selected": "{{ $json.formData.powerCurveStart == 'Apr' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "Aug",
+                "selected": "{{ $json.formData.powerCurveStart == 'Aug' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "Sep",
+                "selected": "{{ $json.formData.powerCurveStart == 'Sep' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "Oct",
+                "selected": "{{ $json.formData.powerCurveStart == 'Oct' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "Nov",
+                "selected": "{{ $json.formData.powerCurveStart == 'Nov' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "Dec",
+                "selected": "{{ $json.formData.powerCurveStart == 'Dec' ? 'true' : 'false' }}"
+              }
+            ],
+            "value": "{{ $json.formData.powerCurveStart }}",
+            "originalValue": "{{ $json.formData.powerCurveStart }}"
+          },
+          {
+            "groupName": "trainingType e68c70ba-ea5f-4d49-83a2-3db82d218bda",
+            "radios": [
+              {
+                "value": "Traditional Daytime Program (2 weeks live via zoom)",
+                "selected": "{{ $json.formData.trainingType == 'Traditional' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "Seasoned Agent will NOT be attending training",
+                "selected": "{{ $json.formData.trainingType == 'Seasoned_No' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "Accelerated Program Online, for part-time agents only",
+                "selected": "{{ $json.formData.trainingType == 'Accelerated' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "Seasoned Agent will attend classes as needed/wanted",
+                "selected": "{{ $json.formData.trainingType == 'Seasoned_Yes' ? 'true' : 'false' }}"
+              }
+            ],
+            "value": "{{ $json.formData.trainingType }}",
+            "originalValue": "{{ $json.formData.trainingType }}"
+          },
+          {
+            "groupName": "ccType 69ac2de2-ed45-4dfd-baa9-cace034dbc0e",
+            "radios": [
+              {
+                "value": "Visa",
+                "selected": "{{ $json.formData.ccType == 'Visa' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "MasterCard",
+                "selected": "{{ $json.formData.ccType == 'MasterCard' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "Amex",
+                "selected": "{{ $json.formData.ccType == 'Amex' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "Discover",
+                "selected": "{{ $json.formData.ccType == 'Discover' ? 'true' : 'false' }}"
+              }
+            ],
+            "value": "{{ $json.formData.ccType }}",
+            "originalValue": "{{ $json.formData.ccType }}"
+          },
+          {
+            "groupName": "resideInCal 91496977-fe3f-4823-9c44-954dcfb3ebc9",
+            "radios": [
+              {
+                "value": "Yes",
+                "selected": "{{ $json.formData.resideInCal == 'Yes' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "No",
+                "selected": "{{ $json.formData.resideInCal == 'No' ? 'true' : 'false' }}"
+              }
+            ],
+            "value": "{{ $json.formData.resideInCal }}",
+            "originalValue": "{{ $json.formData.resideInCal }}"
+          }
+        ],
+        "tabGroups": [
+          {
+            "groupLabel": "Checkbox Group 60935a85-153a-4174-9961-90fc007cdbe9",
+            "minimumRequired": "0",
+            "maximumAllowed": "1",
+            "groupRule": "SelectAtLeast"
+          }
+        ]
+      }
+    },
+    {
+      "roleName": "Office Administrator",
+      "routingOrder": "2",
+      "name": "{{ $json.requestData.office_manager_name }}",
+      "email": "{{ $json.requestData.office_manager_email }}",
+      "tabs": {
+        "signerAttachmentTabs": [
+          {
+            "name": "SignerAttachment",
+            "tabLabel": "real_estate_license_attachment ee7cb82d-39de-4484-b169-3c202ef75d4b"
+          }
+        ],
+        "textTabs": [
+          {
+            "value": "{{ $json.formData.branchOffice }}",
+            "originalValue": "{{ $json.formData.branchOffice }}",
+            "tabLabel": "branchOffice b7a33870-63d4-4c40-8e1e-56f9fc93969f"
+          },
+          {
+            "value": "{{ $json.formData.teamName }}",
+            "originalValue": "{{ $json.formData.teamName }}",
+            "tabLabel": "teamName 2540e24c-f523-4ba3-8477-772dfaf58598"
+          },
+          {
+            "value": "{{ $json.formData.realEstateLicenseNumber }}",
+            "originalValue": "{{ $json.formData.realEstateLicenseNumber }}",
+            "tabLabel": "realEstateLicenseNumber fe746c7a-7d71-4e2c-be9d-0552acfbc784"
+          },
+          {
+            "value": "{{ $json.formData.realEstateLicenseExpiration }}",
+            "originalValue": "{{ $json.formData.realEstateLicenseExpiration }}",
+            "tabLabel": "realEstateLicenseExpiration 44e8a708-8c2a-4038-8309-27d052284618"
+          },
+          {
+            "value": "{{ $json.formData.commissionLevel }}",
+            "originalValue": "{{ $json.formData.commissionLevel }}",
+            "tabLabel": "commissionLevel 652366a3-a5ee-492e-9736-2957c10819f7"
+          },
+          {
+            "value": "{{ $json.formData.branchOffice }}",
+            "originalValue": "{{ $json.formData.branchOffice }}",
+            "tabLabel": "branchOffice 4aa8169e-5f23-4adc-bdc3-a8db8be0647e"
+          },
+          {
+            "value": "{{ $json.formData.realEstateLicenseIssueDate }}",
+            "originalValue": "{{ $json.formData.realEstateLicenseIssueDate }}",
+            "tabLabel": "realEstateLicenseIssueDate 9e44a45d-ecc2-4bce-a77f-c68df5d002e2"
+          }
+        ],
+        "checkboxTabs": [
+          {
+            "name": "",
+            "tabLabel": "Checkbox 9b78fed1-ee13-4387-b4d5-53b5207d8893",
+            "selected": "false",
+            "selectedOriginal": "false",
+            "tabGroupLabels": [
+              "Checkbox Group cacc0028-d23d-4883-98d9-8c7a178c8a23"
+            ]
+          },
+          {
+            "name": "",
+            "tabLabel": "Checkbox 8a70e3b5-730c-4288-885f-c9ca39f2bddd",
+            "selected": "true",
+            "selectedOriginal": "true",
+            "tabGroupLabels": [
+              "Checkbox Group 56cba852-1632-4a4a-a84f-b073c5eadebf"
+            ]
+          }
+        ],
+        "radioGroupTabs": [
+          {
+            "groupName": "Radio Group e1f52f9c-c5eb-4121-ab54-fa220dfe458e",
+            "radios": [
+              {
+                "value": "Radio1",
+                "selected": "false"
+              },
+              {
+                "value": "Radio2",
+                "selected": "false"
+              }
+            ],
+            "value": "",
+            "originalValue": ""
+          },
+          {
+            "groupName": "agentType 06028282-a51e-4d38-82be-668ea4d9f354",
+            "radios": [
+              {
+                "value": "Seasoned",
+                "selected": "{{ $json.formData.agentType == 'Seasoned' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "New",
+                "selected": "{{ $json.formData.agentType == 'New' ? 'true' : 'false' }}"
+              }
+            ],
+            "value": "{{ $json.formData.agentType }}",
+            "originalValue": "{{ $json.formData.agentType }}"
+          },
+          {
+            "groupName": "isTeam 90b3425e-47ac-4943-8a45-3dfe6b5f9e36",
+            "radios": [
+              {
+                "value": "Yes",
+                "selected": "{{ $json.formData.isTeam == 'Yes' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "No",
+                "selected": "{{ $json.formData.isTeam == 'No' ? 'true' : 'false' }}"
+              }
+            ],
+            "value": "{{ $json.formData.isTeam }}",
+            "originalValue": "{{ $json.formData.isTeam }}"
+          },
+          {
+            "groupName": "paymentPlan 4af5c42a-31cb-4826-ab04-76c8c9726a28",
+            "radios": [
+              {
+                "value": "OneTime",
+                "selected": "{{ $json.formData.paymentPlan == 'OneTime' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "Monthly",
+                "selected": "{{ $json.formData.paymentPlan == 'Monthly' ? 'true' : 'false' }}"
+              }
+            ],
+            "value": "{{ $json.formData.paymentPlan }}",
+            "originalValue": "{{ $json.formData.paymentPlan }}"
+          },
+          {
+            "groupName": "paymentPlan 1e577a32-816b-4479-834b-644909805763",
+            "radios": [
+              {
+                "value": "OneTime",
+                "selected": "{{ $json.formData.paymentPlan == 'OneTime' ? 'true' : 'false' }}"
+              },
+              {
+                "value": "Monthly",
+                "selected": "{{ $json.formData.paymentPlan == 'Monthly' ? 'true' : 'false' }}"
+              }
+            ],
+            "value": "{{ $json.formData.paymentPlan }}",
+            "originalValue": "{{ $json.formData.paymentPlan }}"
+          }
+        ],
+        "tabGroups": [
+          {
+            "groupLabel": "Checkbox Group 56cba852-1632-4a4a-a84f-b073c5eadebf",
+            "minimumRequired": "0",
+            "maximumAllowed": "1",
+            "groupRule": "SelectAtLeast"
+          },
+          {
+            "groupLabel": "Checkbox Group cacc0028-d23d-4883-98d9-8c7a178c8a23",
+            "minimumRequired": "0",
+            "maximumAllowed": "1",
+            "groupRule": "SelectAtLeast"
+          }
+        ]
+      }
+    },
+    {
+      "roleName": "Branch Manager",
+      "routingOrder": "3",
+      "name": "Mir Waleed",
+      "email": "mirwaleed9954@gmail.com",
+      "tabs": {
+        "signHereTabs": [
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature 9256648f-7dcd-474b-bbeb-b671722620b8"
+          },
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature 1cd97ad4-6fab-4e96-885e-db4d3c21afb3"
+          },
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature f0ca491d-ca26-4c7a-a64c-f01b2abb0b54"
+          },
+          {
+            "name": "SignHere",
+            "tabLabel": "Signature 48673dde-9acc-4a93-ad23-31ab900665eb"
+          }
+        ],
+        "initialHereTabs": [
+          {
+            "name": "InitialHere",
+            "tabLabel": "Initial 92dd44b4-7d2b-423b-a24f-c84c28124355"
+          },
+          {
+            "name": "InitialHere",
+            "tabLabel": "Initial b3419e8c-d2cd-4896-9944-e9b29342dea7"
+          },
+          {
+            "name": "InitialHere",
+            "tabLabel": "Initial b37fd670-428c-483f-84aa-9eb45dc566d6"
+          },
+          {
+            "name": "InitialHere",
+            "tabLabel": "Initial 9a95b2b3-7b53-4779-a847-cc37d8f3a8b7"
+          }
+        ],
+        "fullNameTabs": [
+          {
+            "name": "FullName",
+            "value": "",
+            "tabLabel": "Name 5304dc82-517d-4f0a-81c0-8e0f3b9523f5"
+          },
+          {
+            "name": "FullName",
+            "value": "",
+            "tabLabel": "Name 772402ac-673d-4c78-89f2-94601c4616f6"
+          }
+        ],
+        "dateSignedTabs": [
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed b13fd1fa-d062-4821-b7be-74f9d963c913"
+          },
+          {
+            "name": "DateSigned",
+            "value": "",
+            "tabLabel": "Date Signed de63c1fe-6588-42e6-8647-193657a248d2"
+          }
+        ],
+        "textTabs": [
+          {
+            "value": "",
+            "originalValue": "",
+            "tabLabel": "Text 3c2eb212-eaf2-41f3-8dcc-72a12c4c60f8"
+          },
+          {
+            "value": "Branch Manager",
+            "originalValue": "Branch Manager",
+            "tabLabel": "Text 5af56816-099d-4df1-9dd8-d1f2aa4cfd25"
+          },
+          {
+            "value": "01008773",
+            "originalValue": "01008773",
+            "tabLabel": "Text a2fd41a5-d704-4f99-8819-94f4b53697d5"
+          },
+          {
+            "value": "Please upload a copy of the agent's DRE print out",
+            "originalValue": "Please upload a copy of the agent's DRE print out",
+            "tabLabel": "Text f66315d7-468b-4b7f-896b-b311587181cc"
+          }
+        ]
+      }
+    }
+  ]
+}
