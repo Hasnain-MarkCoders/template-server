@@ -5,6 +5,8 @@ import {
   setRegistryCache,
 } from './loadRegistry.js';
 import { findRule } from './matchTemplate.js';
+import { normalizeFormData } from './normalizers.js';
+import { resolveEnvelope } from './resolveEnvelope.js';
 import { validateRegistryOnDisk } from './validateRegistry.js';
 
 const PORT = Number(process.env.PORT) || 3100;
@@ -25,7 +27,9 @@ app.get('/registry', (_req, res) => {
 
 app.post('/match', (req, res) => {
   try {
-    const formData = req.body?.formData ?? req.body ?? {};
+    const body = req.body ?? {};
+    const rawForm = body.formData ?? body;
+    const formData = normalizeFormData(rawForm);
     const { rule, ctx } = findRule(registry, formData);
     const meta = registry.payloads[rule.payloadKey];
 
@@ -37,6 +41,9 @@ app.post('/match', (req, res) => {
     }
 
     const envelope = loadTemplateFile(meta.file);
+    const item = { ...body, formData };
+    const resolvedEnvelope = resolveEnvelope(envelope, item);
+    const docusignBody = JSON.stringify(resolvedEnvelope);
 
     console.log(
       JSON.stringify({
@@ -49,14 +56,16 @@ app.post('/match', (req, res) => {
     );
 
     res.json({
-      matched: true,
-      ruleId: rule.id,
-      payloadKey: rule.payloadKey,
-      templateId: meta.templateId,
-      docusignName: meta.docusignName,
-      match: rule.match,
-      ctx,
-      envelope,
+      // matched: true,
+      // ruleId: rule.id,
+      // payloadKey: rule.payloadKey,
+      // templateId: meta.templateId,
+      // docusignName: meta.docusignName,
+      // match: rule.match,
+      // ctx,
+      // envelope,
+      // resolvedEnvelope,
+      docusignBody,
     });
   } catch (e) {
     const status = e.statusCode || 500;

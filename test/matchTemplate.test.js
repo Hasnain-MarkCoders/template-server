@@ -21,6 +21,28 @@ describe('normalizers', () => {
     assert.equal(getValue({ agentType: 'new' }, 'agentType'), 'New');
     assert.equal(getValue({ agentType: 'SEASONED' }, 'agentType'), 'Seasoned');
   });
+
+  it('normalizes isTeam boolean and case', () => {
+    assert.equal(getValue({ isTeam: true }, 'isTeam'), 'Yes');
+    assert.equal(getValue({ isTeam: false }, 'isTeam'), 'No');
+    assert.equal(getValue({ isTeam: 'yes' }, 'isTeam'), 'Yes');
+  });
+});
+
+describe('normalizeFormData', () => {
+  it('normalizes Yes/No fields together', async () => {
+    const { normalizeFormData } = await import('../src/normalizers.js');
+    const out = normalizeFormData({
+      isTeam: true,
+      loi: 'yes',
+      agentType: 'new',
+      zendesk_office_id: ' 123 ',
+    });
+    assert.equal(out.isTeam, 'Yes');
+    assert.equal(out.loi, 'Yes');
+    assert.equal(out.agentType, 'New');
+    assert.equal(out.zendesk_office_id, '123');
+  });
 });
 
 describe('findRule', () => {

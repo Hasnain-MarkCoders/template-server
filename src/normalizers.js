@@ -1,12 +1,8 @@
+import { normalizeYesNoValue, YES_NO_FORM_FIELDS } from './yesNo.js';
+
 const NORMALIZERS = {
-  loi: (v) => {
-    if (v === true || v === 'true') return 'Yes';
-    if (v === false || v === 'false') return 'No';
-    const s = String(v ?? '').trim().toLowerCase();
-    if (s === 'yes') return 'Yes';
-    if (s === 'no') return 'No';
-    return String(v ?? '').trim();
-  },
+  loi: normalizeYesNoValue,
+  isTeam: normalizeYesNoValue,
   agentType: (v) => {
     const s = String(v ?? '').trim();
     if (s.toLowerCase() === 'new') return 'New';
@@ -20,6 +16,22 @@ export function getValue(formData, key) {
   const raw = formData?.[key];
   const norm = NORMALIZERS[key];
   return norm ? norm(raw) : String(raw ?? '').trim();
+}
+
+/** Applies Yes/No + routing normalizers for match and envelope resolve. */
+export function normalizeFormData(formData) {
+  const out = { ...(formData ?? {}) };
+  for (const key of YES_NO_FORM_FIELDS) {
+    if (key in out) {
+      out[key] = normalizeYesNoValue(out[key]);
+    }
+  }
+  for (const key of ['agentType', 'zendesk_office_id']) {
+    if (key in out) {
+      out[key] = getValue(out, key);
+    }
+  }
+  return out;
 }
 
 /** Normalized routing slice for logging and error responses */

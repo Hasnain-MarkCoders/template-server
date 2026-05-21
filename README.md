@@ -31,17 +31,24 @@ Returns the loaded registry (rules + payload metadata, not full envelopes).
 
 ### `POST /match`
 
-**Body:** webhook payload with `formData`, or `formData` fields at the root.
+**Body:** full webhook/Mongo item with `formData` and `requestData` (recommended), or `formData` only / fields at root for routing-only calls.
 
 ```json
 {
   "formData": {
     "zendesk_office_id": "23308433036311",
     "agentType": "New",
-    "loi": "No"
+    "loi": "No",
+    "isTeam": "No"
+  },
+  "requestData": {
+    "agent_name": "Jane Agent",
+    "agent_email": "jane@example.com"
   }
 }
 ```
+
+Yes/No fields (`isTeam`, `loi`, `waiveFirstYearFee`, `resideInCal`) are normalized server-side (booleans and `yes`/`no` → `Yes`/`No`) before match and envelope resolve.
 
 **Success (200):**
 
@@ -53,9 +60,15 @@ Returns the loaded registry (rules + payload metadata, not full envelopes).
   "templateId": "9f5d0e4f-5d8a-4ca5-9362-03c40f4f96ab",
   "match": { ... },
   "ctx": { ... },
-  "envelope": { ... }
+  "envelope": { ... },
+  "resolvedEnvelope": { ... },
+  "docusignBody": "{...}"
 }
 ```
+
+- `envelope` — raw template with `{{ $json.... }}` placeholders (backward compatible).
+- `resolvedEnvelope` — all placeholders evaluated; ready for DocuSign.
+- `docusignBody` — `JSON.stringify(resolvedEnvelope)` for n8n HTTP Raw body.
 
 **No match (404):** `{ "matched": false, "error": "...", "ctx": { ... } }`
 
@@ -83,25 +96,17 @@ curl -s -X POST http://localhost:3100/match \
 
 ## n8n integration
 
-1. **Webhook** receives form submission (`formData`, `requestData`, `files`).
-2. **HTTP Request** → `POST http://<host>:3100/match` with the webhook JSON body.
-3. **Code** (merge for DocuSign expressions):
+1. **Mongo Get** (or webhook) provides `formData`, `requestData`, etc.
+2. **HTTP Request** → `POST http://<host>:3100/match` with that full JSON body.
+3. **DocuSign HTTP** (or node): Raw body, Content-Type `application/json`, expression mode:
 
-```javascript
-const webhook = $('Webhook').first().json;
-const match = $input.first().json;
-return [{
-  json: {
-    ...webhook,
-    payloadKey: match.payloadKey,
-    templateId: match.templateId,
-    ruleId: match.ruleId,
-    envelope: match.envelope,
-  },
-}];
+```text
+{{ $json.docusignBody }}
 ```
 
-4. **DocuSign** node uses `envelope` fields. Expressions like `{{ $json.formData.legalName }}` still resolve because the merged item keeps original `formData`.
+No merge Code or in-workflow expression resolver needed — `/match` returns a fully resolved envelope.
+
+Keep `Authorization` and other headers as before (e.g. token from `Get row(s)`).
 
 ## Adding templates
 
