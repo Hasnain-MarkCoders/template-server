@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "allowedMatchFields": ["zendesk_office_id", "agentType", "loi"],
   "payloads": {
     "standard_nhpw_new_agent_no_loi": {
